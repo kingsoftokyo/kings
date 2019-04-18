@@ -1,0 +1,601 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+a{
+	text-decoration:none;
+	color:#fc9e4f;
+}
+
+a:hover {
+	text-decoration:underline;
+	color:#ffcc68;
+}
+
+.section p {
+	font-family:'Open Sans', sans-serif;
+	font-size:0.6em;
+}
+
+table {
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+strong{
+	font-weight: bold;
+}
+ol,ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+caption,th {
+    text-align: left;
+
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+    margin:0;
+    padding:0;
+    color:#444;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym { border: 0;
+}
+
+
+/* Custom CSS
+ * --------------------------------------- */
+body{
+	font-family: arial,helvetica;
+	color: #333;
+	font-size:1em;
+}
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+h1{
+	font-size: 6em;
+}
+
+p{
+	font-size: 2em;
+}
+.intro p{
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.2em;
+}
+
+#fullpage {
+	margin-top:100px;
+}
+.section{
+	text-align:center;
+}
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+.twitter-share-button{
+	position: fixed;
+	z-index: 99;
+	right: 149px;
+	top: 9px;
+}
+#download{
+	margin: 10px 0 0 0;
+	padding: 15px 10px;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+	background-color: #49afcd;
+	background-image: -moz-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: -ms-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from( #5bc0de),to( #2f96b4));
+	background-image: -webkit-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: -o-linear-gradient(top, #5bc0de, #2f96b4);
+	background-image: linear-gradient(top, #5bc0de, #2f96b4);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#5bc0de', endColorstr='#2f96b4', GradientType=0);
+	border-color: #2f96b4 #2f96b4 #1f6377;
+	border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	vertical-align: middle;
+	cursor: pointer;
+	display: inline-block;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+}
+#download a{
+	text-decoration:none;
+	color:#fff;
+}
+#download:hover{
+	text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+	background-color: #2F96B4;
+	background-position: 0 -15px;
+	-webkit-transition: background-position .1s linear;
+	-moz-transition: background-position .1s linear;
+	-ms-transition: background-position .1s linear;
+	-o-transition: background-position .1s linear;
+	transition: background-position .1s linear;
+}
+#infoMenu{
+	height: 20px;
+	color: #f2f2f2;
+	position:fixed;
+	z-index:70;
+	bottom:0;
+	width:100%;
+	text-align:right;
+	font-size:0.9em;
+	padding:8px 0 8px 0;
+}
+#infoMenu ul{
+	padding: 0 40px;
+}
+#infoMenu li a{
+	display: block;
+	margin: 0 22px 0 0;
+	color: #333;
+}
+#infoMenu li a:hover{
+	text-decoration:underline;
+}
+#infoMenu li{
+	display:inline-block;
+	position:relative;
+}
+#examplesList{
+	display:none;
+	background: #282828;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 20px;
+	float: left;
+	position: absolute;
+	bottom: 29px;
+	right: 0;
+	width:638px;
+	text-align:left;
+}
+#examplesList ul{
+	padding:0;
+}
+#examplesList ul li{
+	display:block;
+	margin: 5px 0;
+}
+#examplesList ul li a{
+	color: #BDBDBD;
+	margin:0;
+}
+#examplesList ul li a:hover{
+	color: #f2f2f2;
+}
+#examplesList .column{
+	float: left;
+	margin: 0 20px 0 0;
+}
+#examplesList h3{
+	color: #f2f2f2;
+	font-size: 1.2em;
+	margin: 0 0 15px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.1);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+	padding: 0 0 5px 0;
+}
+
+
+
+/* Demos Menu
+ * --------------------------------------- */
+ #demosMenu{
+	position:fixed;
+	bottom: 10px;
+	right:10px;
+	z-index: 999;
+ }
+ 
+ /* Individual Slide BGs
+ * --------------------------------------- */
+
+ .section h1 {
+	font-size: 3em;
+	font-family:'Alfa Slab One', cursive;
+	color: #fff;
+	margin:0;
+	padding:0;
+ }
+ 
+ #section0 {
+	 background-color:#25093d;
+ }
+ 
+ #section1 {
+	 background-color:#a00a0a;
+ }
+	 
+#section2 {
+	background-color:#25093d;
+}
+
+ #section3 {
+	 background-color:#a00a0a;
+ }
+ 
+ #section4 {
+	 background-color:#25093d;
+ }
+
+ #section5 {
+	background-color:#a00a0a;
+ }
+ 
+  #section6 {
+	 background-color:#25093d;
+ }
+ 
+ /* King Profiles
+ * --------------------------------------- */
+ 
+ .kingProfile {
+	width:80%;
+	margin:0px auto;
+	overflow:hidden;
+ }
+ 
+ .kingProfile a {
+	 color:#ffcc68;
+	 text-decoration:none;
+	 font-weight:normal;
+ }
+ 
+ .kingProfile a:hover {
+	 color:#a00a0a;
+	 font-weight:bold;
+ }
+ 
+.kingProfile li {
+	list-style-type: circle;
+	text-align:left;
+	margin-left:5%;
+	color:white;
+}
+
+ .kingPortrait {
+	float:left;
+	width:30%;
+	overflow:hidden;
+	margin-right:5%;
+	text-align:center;
+ }
+ 
+ .kingPortrait img {
+	 height:80%;
+	 max-width:300px;
+	 width:80%;
+ }
+ 
+.kingText {
+	float:left;
+	height:auto;
+	width:60%;
+	margin:2% 0;
+ }
+ 
+ .kingText h2 {
+	font-family:'Alfa Slab One', cursive;
+	color:white;
+	font-size:2em;
+	font-weight:normal;
+	text-align:left;
+ }
+ 
+ .kingText p {
+	 font-family:'Open Sans', sans-serif;
+	 font-size:1em;
+	 color:white;
+	 text-align:left;
+	 margin: 3% 0;
+ }
+ 
+ .backText {
+	width:20%;
+	text-align:right;
+	float:right;
+ }
+ 
+ .backText p{
+	 text-align:right;
+ }
+ 
+ .italic {
+	 font-style:italic;
+ }
+ 
+ .emphasis {
+	 font-weight:bold;
+	 color:yellow;
+ }
+ 
+ 
+ /* King Profiles
+ * --------------------------------------- */
+ 
+ .galleryContainer {
+	 width:80%;
+	 height:300px;
+	 text-align:center;
+	 margin: 0px auto;
+ }
+ 
+.galleryContainer img {
+	max-width:100px;
+	height:auto;
+	border:3px solid #fc9e4f;
+	margin: 10px;
+ }
+ 
+ .galleryContainer a {
+	 text-decoration:none;
+	 font-weight:normal;
+ }
+ 
+ .galleryContainer a:hover {
+	 opacity:0.4;
+ }
+ 
+ 
+ 
+ /* Volunteer
+ * --------------------------------------- */
+ 
+ .become {
+	width:60%;
+	margin:0px auto;
+ }	
+ 
+ .become h2 {
+	font-family:'Alfa Slab One', cursive;
+	color:white;
+	font-size:2.5em;
+	font-weight:normal;
+	text-align:center;
+ }
+  .become p {
+	 font-family:'Open Sans', sans-serif;
+	 font-size:1em;
+	 color:white;
+	 text-align:left;
+	 margin: 10px 0;
+  }
+  
+  .become ul li {
+	   font-family:'Open Sans', sans-serif;
+	 font-size:1em;
+	 color:white;
+	 text-align:left;
+	 margin-left:3%;
+	 list-style:circle;
+  }
+  
+  
+   /* Schedule
+ * --------------------------------------- */
+ 
+.events {
+	height:80%;
+	margin:10% auto;
+	width:60%;
+	text-align:center;
+}
+
+.events img {
+	width:35%;
+	height:auto;
+	float:left;
+	margin-right:3%;
+}
+
+.events p{
+	float:left;
+	font-family:'Open Sans', sans-serif;
+	font-size:1em;
+	color:white;
+	text-align:left;
+}
+
+.pastEvents {
+	position:absolute;
+	bottom:25%;
+}
+ 
+.events h2 {
+	font-family:'Alfa Slab One', cursive;
+	color:white;
+	font-size:2em;
+	font-weight:normal;
+	text-align:left;
+	margin-top:10%;
+	margin-bottom:5%;
+}
+
+.events ul{
+	margin-left:3%;
+}
+
+.events ul li {
+	font-family:'Open Sans', sans-serif;
+	 font-size:1em;
+	 color:white;
+	 text-align:left;
+	 list-style:none;
+}
+ 
+.oldEvents {
+	height:80%;
+	margin:10% auto;
+	width:80%;
+	text-align:center;
+}
+
+ 
+ /* jLightRoom CSS
+ * --------------------------------------- */
+ 
+
+.jlr {
+	font-size: 0; /*remove epmty space between images*/
+	width:80%;
+	margin:auto auto;
+}
+	
+.jlr a,  .jlr div {
+	font-size: 1rem;
+	display: inline-block;
+	box-sizing: border-box;     
+	padding: 5px; /*padding between images, must be the same value like the img_space property in the js-scipt on the buttom*/
+}
+
+.jlr img {
+	height: 120px; /*the average image height*/
+	width:auto;
+	opacity: 0; /* while jLightbox not finish, set images invisible */
+	
+border:3px solid #fc9e4f;
+}
+
+/* this cass will be added after jLightroom has loaded the images */
+.jlr img.jlr_loaded {
+	 -webkit-transition: opacity 1s ease-in;
+	-moz-transition: opacity 1s ease-in;
+	-o-transition: opacity 1s ease-in;
+	-ms-transition: opacity 1s ease-in;
+	transition: opacity 1s ease-in;
+	opacity: 1;
+}
+
+/* this cass will be added after jLightroom has loaded the images */
+.jlr img.jlr_loaded {
+	 -webkit-transition: opacity 1s ease-in;
+	-moz-transition: opacity 1s ease-in;
+	-o-transition: opacity 1s ease-in;
+	-ms-transition: opacity 1s ease-in;
+	transition: opacity 1s ease-in;
+	opacity: 1;
+}
+
+/* Video background
+* --------------------------------------- */
+
+#myVideo{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	top:0;
+	right:0;
+	width: 100%;
+	height: 100%;
+	background-size: 100% 100%;
+	background-color: black; /* in case the video doesn't fit the whole page*/
+	background-image: /* our video */;
+	background-position: center center;
+	background-size: contain;
+	object-fit: cover; /*cover video background */
+	z-index:3;
+}
+
+
+
+/* Layer with position absolute in order to have it over the video
+* --------------------------------------- */
+#section0 .layer{
+	position: absolute;
+	z-index: 4;
+	width: 100%;
+	left: 0;
+	top: 43%;
+
+	/*
+	* Preventing flicker on some browsers
+	* See http://stackoverflow.com/a/36671466/1081396  or issue #183
+	*/
+	-webkit-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/*solves problem with overflowing video in Mac with Chrome */
+#section0{
+	overflow: hidden;
+}
+
+/* Hiding video controls
+* See: https://css-tricks.com/custom-controls-in-html5-video-full-screen/
+* --------------------------------------- */
+video::-webkit-media-controls {
+  display:none !important;
+}
