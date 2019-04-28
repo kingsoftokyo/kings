@@ -52,14 +52,17 @@
 
 <div id="fullpage">
 	<div class="section" id="section0">
-		<div class="intro">
-			<video id="myVideo" loop muted data-autoplay>
+			<div class ="myVideo">
+			<iframe id = "backgroundvideo" src="https://www.youtube.com/embed/BWtz3l7a1OM?autoplay=1&loop=1&mute=1&controls=0&showinfo=0&autohide=1&playlist=BWtz3l7a1OM" frameborder="0"  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			<!--<video id="myVideo" loop muted data-autoplay>
 				<source src="vid/promo.mp4" type="video/mp4">
-			</video>
+			</video> -->
+			</div>
 			<div class="layer">
 				<!-- <h1>Welcome to the Court!</h1> -->
 			</div>
-			
+		<div class="intro">
+
 		</div>
 	</div>
 	<div class="section" id="section1">
@@ -381,7 +384,20 @@
 		</div>
 	</div>
 </div>
+<script>
+window.onresize = updateVideoSize;
 
+function updateVideoSize() {
+    //do a load of stuff
+ //console.log("WINDOW WAS RESIZED");
+ 
+ 
+var HTMLElement = document.getElementById('backgroundvideo')
+ HTMLElement.width = (window.outerWidth+100) +"";
+ HTMLElement.height = (window.outerHeight+100) +"";
+}
+updateVideoSize();
+</script>
 <script type="text/javascript" src="js/fullpage.js"></script>
 <script type="text/javascript" src="js/examples.js"></script>
 

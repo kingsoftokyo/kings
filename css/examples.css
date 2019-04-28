@@ -551,7 +551,7 @@ border:3px solid #fc9e4f;
 /* Video background
 * --------------------------------------- */
 
-#myVideo{
+.myVideo{
 	position: absolute;
 	right: 0;
 	bottom: 0;
@@ -566,6 +566,7 @@ border:3px solid #fc9e4f;
 	background-size: contain;
 	object-fit: cover; /*cover video background */
 	z-index:3;
+	pointer-events: none;
 }
 
 
